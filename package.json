@@ -1,0 +1,24 @@
+{
+  "name": "lsamp.wsu.edu",
+  "version": "0.0.0",
+  "description": "Website of the WSU LSAMP program",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/invokeImmediately/lsamp.wsu.edu.git"
+  },
+  "keywords": [
+    "Washington",
+    "State",
+    "University"
+  ],
+  "author": "Daniel Rieck <danielcrieck@gmail.com> (https://www.linkedin.com/in/danielcrieck/)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/invokeImmediately/lsamp.wsu.edu/issues"
+  },
+  "homepage": "https://github.com/invokeImmediately/lsamp.wsu.edu#readme"
+}
