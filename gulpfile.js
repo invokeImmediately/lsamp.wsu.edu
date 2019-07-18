@@ -1,17 +1,51 @@
+/*!*************************************************************************************************
+ * gulpfile.js
+ * -------------------------------------------------------------------------------------------------
+ * SUMMARY: Gulp automation task definition file for setting up tasks that build CSS and JS files
+ * for use on the WSUWP website of the WSU LSAMP program.
+ *
+ * AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ *
+ * REPOSITORY: https://github.com/invokeImmediately/nsse.wsu.edu
+ *
+ * LICENSE: ISC - Copyright (c) 2019 Daniel C. Rieck.
+ *
+ *   Permission to use, copy, modify, and/or distribute this software for any purpose with or
+ *   without fee is hereby granted, provided that the above copyright notice and this permission
+ *   notice appear in all copies.
+ *
+ *   THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS
+ *   SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL
+ *   DANIEL RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY
+ *   DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
+ *   CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+ *   PERFORMANCE OF THIS SOFTWARE.
+ **************************************************************************************************/
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// TABLE OF CONTENTS
+// -----------------
+// §1: Gulp task dependencies..................................................................40
+// §2: Specificiation of build settings .......................................................45
+//   §2.1: getCssBuildSettings()...............................................................48
+//   §2.2: getJsBuildSettings()................................................................82
+// §3: Entry point: Set up of build taks......................................................103
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 ( function() {
 
 'use strict';
 
-/* -------------------------------------------------------------------------------------------------
-** Variable Declarations
-*/
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// §1: Gulp task dependencies
 
-// Gulp task dependencies
 var gulpBuilder = require( './WSU-UE---JS/gulpBuilder.js' );
 
-/* -------------------------------------------------------------------------------------------------
-** Function declarations
-*/
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// §2: Specificiation of build settings 
+
+////////
+// §2.1: getCssBuildSettings()
 
 /**
  * Get the settings for a gulp-mediated custom CSS build from Less source files.
@@ -44,6 +78,9 @@ se see [https://github.com/invokeImmediately/lsamp.wsu.edu] for a repository of 
 		minCssFileHeaderStr, sourceFile);
 }
 
+////////
+// §2.2: getJsBuildSettings()
+
 /**
  * Get the settings for a gulp-mediated custom JS build.
  *
@@ -62,9 +99,8 @@ function getJsBuildSettings() {
 	};
 }
 
-/* -------------------------------------------------------------------------------------------------
-** Main execution sequence
-*/
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// §3: Entry point: Set up of build taks
 
 gulpBuilder.setUpCssBuildTask( getCssBuildSettings() );
 gulpBuilder.setUpJsBuildTask( getJsBuildSettings() );
