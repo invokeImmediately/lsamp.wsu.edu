@@ -1,0 +1,58 @@
+/*!*** Custom CSS for Qualtrics Survey: *****************/
+/*!*** Connecting Community Colleges to WSU 2019 ********/
+
+/*!*** Overrides of default/theme's styling *************/
+
+.Skin .QuestionText {
+    padding: 20px 20px 10px;
+}
+
+.Skin label.MultipleAnswer, .Skin label.SingleAnswer {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    padding: calc(.5em + 1px);
+}
+
+/*!*** Additional styling based on heirarchy ************/
+
+* + p {
+    margin-top: 1em;
+}
+
+/*!*** Additional styling based on component labeling ***/
+
+.cccw-event__title {
+    color: black;
+    line-height: 1.2em;
+}
+
+.cccw-event__date {
+    color: black;
+    line-height: 1.2em;
+    margin-top: .5em;
+}
+
+.cccw-event__host {
+    color: #981e32;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.cccw-event__section-title {
+    color: #981e32;
+    line-height: 1.2em;
+    padding-bottom: 3px;
+}
+
+.cccw-event__question-note {
+    font-style: italic;
+}
+
+.cccw-event__required-marker {
+    color: #981e32;
+    font-weight: bold;
+}
+
+.cccw-event__main-question {
+    font-weight: bold;
+}
