@@ -37,3 +37,31 @@
 ***     See git repository for fully documented, precompiled source code.
 *** ================================================================================================
 **/
+
+.main-header {
+	background-color: #203639;
+
+	&::before {
+		background: transparent url(https://s3.wp.wsu.edu/uploads/sites/2366/2019/07/logo_lsamp-pnw_345x459.jpg) no-repeat 5px 5px/auto 90%;
+		content: "";
+		height: 100%;
+		left: 0;
+		max-height: 204px;
+		max-width: 150px;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.sub-header {
+		padding-left: 150px;
+	}
+
+	.sup-header {
+		background-color: #82a9af;
+		color: black;
+		margin-right: 0;
+		padding: 9px 20px 1px 150px;
+	}
+}
