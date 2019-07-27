@@ -13,11 +13,7 @@
 *** ================================================================================================
 **/
 /* ----------- GENERAL -------------- */
-#spine #glue:before {
-  border-right: solid 1px #dcdcdc;
-}
 #binder {
-  border-right: solid 1px #dcdcdc;
   background-color: #ffffff;
   color: #203639;
   box-sizing: border-box;
@@ -6583,6 +6579,13 @@ div.auto-scroller ul li {
 ***     See git repository for fully documented, precompiled source code.
 *** ================================================================================================
 **/
+body {
+  background-color: #15574e;
+}
+#wsuwp-main {
+  border-left: 1px solid #15574e;
+  box-sizing: border-box;
+}
 .main-header {
   background-color: #203639;
 }
