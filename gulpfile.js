@@ -89,10 +89,18 @@ se see [https://github.com/invokeImmediately/lsamp.wsu.edu] for a repository of 
 function getJsBuildSettings() {
 	return {
 		buildDependenciesList: [
-			'./JS/lsamp--legacy.js'
+			'./WSU-UE---JS/jQuery.oue-custom.js',
+			'./WSU-UE---JS/jQuery.cookieObjs.js',
+			'./WSU-UE---JS/jQuery.forms.js',
+			'../jQuery.AreYouSure/jquery.are-you-sure.js',
+			'./WSU-UE---JS/jQuery.are-you-sure.js',
+			'../qTip2/dist/jquery.qtip.min.js',
+			'./WSU-UE---JS/jQuery.qTip.js',
+			'./WSU-UE---JS/jQuery.css-data.js',
+			'./WSU-UE---JS/jQuery.textResize.js'
 		],
 		commentNeedle: /^(\/\*)(?!!)/g,
-		compiledJsFileName: 'lsamp.js',
+		compiledJsFileName: 'lsamp-build.js',
 		destFolder: './JS/',
 		minJsFileExtension: '.min.js',
 		replaceCallback: gulpBuilder.fixFileHeaderComments
