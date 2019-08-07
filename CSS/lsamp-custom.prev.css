@@ -1149,6 +1149,7 @@ h1.solid,h2.solid,h3.solid,h4.solid,h5.solid,h6.solid {
 }
 
 h1.solid::before,h2.solid::before,h3.solid::before,h4.solid::before,h5.solid::before,h6.solid::before {
+	box-sizing: border-box;
 	content: "";
 	left: 0;
 	height: 100%;
@@ -3524,25 +3525,25 @@ div.read-more-target {
 	color: #360b12;
 }
 
-.column li.gfield>div.ginput_container_select>div.chosen-container {
+.column li.gfield>.ginput_container_select>.chosen-container {
 	width: 100% !important;
 }
 
-.column li.gfield>div.ginput_container_select>div.chosen-container-single>a.chosen-single {
+.column li.gfield>.ginput_container_select>.chosen-container-single>.chosen-single {
 	background: linear-gradient(to bottom,rgba(0,0,0,0) 20%,rgba(0,0,0,.038) 50%,rgba(0,0,0,.07) 52%,rgba(0,0,0,.045) 100%), linear-gradient(to bottom,#fff,#fff);
 	height: 1.98em;
 	line-height: 1.98em;
 }
 
-.column li.gfield>div.ginput_container_select>div.chosen-container-single>a.chosen-single:hover {
+.column li.gfield>.ginput_container_select>.chosen-container-single>.chosen-single:hover {
 	text-shadow: none;
 }
 
-.column li.gfield>div.ginput_container_select>div.chosen-container-single>a.chosen-single>div>b {
+.column li.gfield>.ginput_container_select>.chosen-container-single>.chosen-single>div>b {
 	background-position: 0 calc(-10px + 1.98em / 2);
 }
 
-.column li.gfield>div.ginput_container_select>div.chosen-container-single.chosen-with-drop>a.chosen-single {
+.column li.gfield>.ginput_container_select>.chosen-container-single.chosen-with-drop>.chosen-single {
 	background: linear-gradient(to bottom,rgba(0,0,0,.07) 20%,rgba(0,0,0,0) 80%), linear-gradient(to bottom,#fff,#fff);
 }
 
@@ -3560,61 +3561,69 @@ div.read-more-target {
 	border-color: #717171 !important;
 }
 
-.column ul.gform_fields.top_label>li.gfield.gfield_error.gf_left_half,.column ul.gform_fields.top_label>li.gfield.gfield_error.gf_right_half {
+.column .gform_fields.top_label>li.gfield.gfield_error.gf_left_half,.column .gform_fields.top_label>li.gfield.gfield_error.gf_right_half {
 	width: calc(50% - 16px);
 }
 
-.column ul.gform_fields.top_label>li.gfield.gf_left_half ul.gfield_checkbox,.column ul.gform_fields.top_label>li.gfield.gf_left_half ul.gfield_radio,.column ul.gform_fields.top_label>li.gfield.gf_right_half ul.gfield_checkbox,.column ul.gform_fields.top_label>li.gfield.gf_right_half ul.gfield_radio {
+.column .gform_fields.top_label>li.gfield.gf_left_half ul.gfield_checkbox,.column .gform_fields.top_label>li.gfield.gf_left_half ul.gfield_radio,.column .gform_fields.top_label>li.gfield.gf_right_half ul.gfield_checkbox,.column .gform_fields.top_label>li.gfield.gf_right_half ul.gfield_radio {
 	width: 100%;
 }
 
-.column ul.gform_fields.top_label>li.gfield>div.gfield_description {
+.column .gform_fields.top_label>li.gfield>div.gfield_description {
 	padding: 0;
 	margin: 0;
 	color: #360b12;
 }
 
-.column ul.gform_fields.top_label>li.gfield>div.gfield_description ul li {
+.column .gform_fields.top_label>li.gfield>div.gfield_description ul li {
 	list-style: disc inside none !important;
 }
 
-.column ul.gform_fields.top_label>li.gfield>div.gfield_description p+ul {
+.column .gform_fields.top_label>li.gfield>div.gfield_description p+ul {
 	margin-top: 0;
 }
 
-.column ul.gform_fields.top_label>li.gfield>div.ginput_complex {
+.column .gform_fields.top_label>li.gfield>div.ginput_complex {
 	margin-top: 0;
 }
 
-.column ul.gform_fields.top_label li.gfield:first-child,.column ul.gform_fields.top_label>li.gfield+li.gfield:not(.gsection) {
+.column .gform_fields.top_label li.gfield:first-child,.column .gform_fields.top_label>li.gfield+li.gfield:not(.gsection) {
 	margin-top: .5em;
 }
 
-.column ul.gform_fields>li.gfield.gfield_contains_required input,.column ul.gform_fields>li.gfield.gfield_contains_required select,.column ul.gform_fields>li.gfield.gfield_contains_required textarea {
+.column .gform_fields>.gfield.gfield_contains_required>.ginput_container_select>.gfield_select:not(.gf-value-entered)+.chosen-container-single:not(.chosen-with-drop)>.chosen-single {
+	background: linear-gradient(to bottom,rgba(0,0,0,0) 20%,rgba(0,0,0,.038) 50%,rgba(0,0,0,.07) 52%,rgba(0,0,0,.045) 100%), linear-gradient(to bottom,rgba(255,0,0,.1),rgba(255,0,0,.1)), linear-gradient(to bottom,#fff,#fff);
+}
+
+.column .gform_fields>.gfield.gfield_contains_required>.ginput_container_select>.gfield_select+.chosen-container-single.chosen-with-drop>.chosen-single {
+	background: linear-gradient(to bottom,rgba(0,0,0,0) 20%,rgba(0,0,0,.038) 50%,rgba(0,0,0,.07) 52%,rgba(0,0,0,.045) 100%), linear-gradient(to bottom,#edf3f4,#edf3f4);
+}
+
+.column .gform_fields>.gfield.gfield_contains_required input,.column .gform_fields>.gfield.gfield_contains_required select,.column .gform_fields>.gfield.gfield_contains_required textarea {
 	transition: background .3s ease;
 }
 
-.column ul.gform_fields>li.gfield.gfield_contains_required input:focus,.column ul.gform_fields>li.gfield.gfield_contains_required select:focus,.column ul.gform_fields>li.gfield.gfield_contains_required textarea:focus {
+.column .gform_fields>.gfield.gfield_contains_required input:focus,.column .gform_fields>.gfield.gfield_contains_required select:focus,.column .gform_fields>.gfield.gfield_contains_required textarea:focus {
 	background-color: #edf3f4 !important;
 }
 
-.column ul.gform_fields>li.gfield.gfield_contains_required input:not(.gf-value-entered):not(:focus),.column ul.gform_fields>li.gfield.gfield_contains_required select:not(.gf-value-entered):not(:focus),.column ul.gform_fields>li.gfield.gfield_contains_required textarea:not(.gf-value-entered):not(:focus) {
+.column .gform_fields>.gfield.gfield_contains_required input:not(.gf-value-entered):not(:focus),.column .gform_fields>.gfield.gfield_contains_required select:not(.gf-value-entered):not(:focus),.column .gform_fields>.gfield.gfield_contains_required textarea:not(.gf-value-entered):not(:focus) {
 	background-color: rgba(255,0,0,.1);
 }
 
-.column ul.gform_fields>li.gfield.gfield_contains_required ul.gfield_checkbox,.column ul.gform_fields>li.gfield.gfield_contains_required ul.gfield_radio {
+.column .gform_fields>.gfield.gfield_contains_required .gfield_checkbox,.column .gform_fields>.gfield.gfield_contains_required .gfield_radio {
 	transition: background .3s ease;
 }
 
-.column ul.gform_fields>li.gfield.gfield_contains_required ul.gfield_checkbox:not(.gf-value-entered),.column ul.gform_fields>li.gfield.gfield_contains_required ul.gfield_radio:not(.gf-value-entered) {
+.column .gform_fields>.gfield.gfield_contains_required .gfield_checkbox:not(.gf-value-entered),.column .gform_fields>.gfield.gfield_contains_required .gfield_radio:not(.gf-value-entered) {
 	background-color: rgba(255,0,0,.1);
 }
 
-.column ul.gform_fields>li.gfield.gfield_contains_required span.address_line_2 input {
+.column .gform_fields>.gfield.gfield_contains_required .address_line_2 input {
 	background-color: #fff !important;
 }
 
-.column ul.gform_fields>li.gfield.gfield_contains_required span.address_line_2 input:focus {
+.column .gform_fields>.gfield.gfield_contains_required .address_line_2 input:focus {
 	background-color: #edf3f4 !important;
 }
 
@@ -6496,7 +6505,7 @@ body {
 }
 
 @media only screen and (max-width:641px) {
-	.column li.gfield>div.ginput_container_select>div.chosen-container-single>a.chosen-single>div>b {
+	.column li.gfield>.ginput_container_select>.chosen-container-single>.chosen-single>div>b {
 		top: calc(.99em - 3px);
 		background-position: 0 -7px;
 	}
