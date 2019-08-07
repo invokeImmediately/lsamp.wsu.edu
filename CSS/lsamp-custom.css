@@ -1321,7 +1321,6 @@ h3.solid::before,
 h4.solid::before,
 h5.solid::before,
 h6.solid::before {
-  box-sizing: border-box;
   content: "";
   left: 0;
   height: 100%;
@@ -1459,6 +1458,15 @@ h5.crimson-text.solid::before,
 h6.crimson-text.solid::before {
   border-top: 2px solid rgba(152, 30, 50, 0.6667);
   border-bottom: 1px solid rgba(152, 30, 50, 0.3333);
+}
+.hX--indent-1 {
+  max-width: calc(100% - 2rem);
+}
+.hX--indent-2 {
+  max-width: calc(100% - 4rem);
+}
+.hX--indent-3 {
+  max-width: calc(100% - 6rem);
 }
 @media print {
   header.main-header {
