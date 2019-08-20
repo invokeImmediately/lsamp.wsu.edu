@@ -1312,7 +1312,7 @@ h3.solid,
 h4.solid,
 h5.solid,
 h6.solid {
-  padding: 0.1em 0.25em 0.11em 5px;
+  padding: 0.15em 0.25em 0.2em 5px;
   position: relative;
 }
 h1.solid::before,
@@ -1322,8 +1322,8 @@ h4.solid::before,
 h5.solid::before,
 h6.solid::before {
   content: "";
-  left: 0;
   height: 100%;
+  left: 0;
   position: absolute;
   top: 0;
   width: 100%;
@@ -1364,8 +1364,8 @@ h3.white-text.solid.black-background::before,
 h4.white-text.solid.black-background::before,
 h5.white-text.solid.black-background::before,
 h6.white-text.solid.black-background::before {
-  border-top: 2px solid #000000;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #000;
+  border-top: 2px solid #000;
 }
 h1.white-text.solid.dark-crimson-background,
 h2.white-text.solid.dark-crimson-background,
@@ -1402,7 +1402,7 @@ h3.white-text.solid.crimson-background::before,
 h4.white-text.solid.crimson-background::before,
 h5.white-text.solid.crimson-background::before,
 h6.white-text.solid.crimson-background::before {
-  border-bottom: 1px solid rgba(79, 16, 26, 0.5);
+  border-bottom: 1px solid #4f101a;
   border-top: 2px solid #4f101a;
 }
 h1.gray-text,
@@ -3716,9 +3716,9 @@ a.vpue-tooltip span b {
 .column a {
   border: 1px solid transparent;
   border-bottom-color: #981e32;
-  border-bottom-left-radius: 0.25em;
-  border-bottom-right-radius: 0.25em;
-  box-shadow: inset 0 -2px 0 rgba(198, 12, 48, 0.5);
+  border-bottom-left-radius: 0.15em;
+  border-bottom-right-radius: 0.15em;
+  box-shadow: inset 0 -1px 0 rgba(152, 30, 50, 0.25);
   text-decoration: none;
   transition: all .25s ease;
 }
@@ -5355,7 +5355,7 @@ div.auto-scroller ul li {
   transform: none;
 }
 .fluid .row.single .column.page-header__column-1--p-static {
-  width: 100%;
+  width: 100% !important;
 }
 .fluid .row.single .page-header__text-breadcrumb,
 .page-header__text-title,
