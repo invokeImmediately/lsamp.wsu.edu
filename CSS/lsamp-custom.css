@@ -2482,6 +2482,7 @@ ol {
 }
 .column .builder-banner-slide > a {
   border: none;
+  box-shadow: none;
   height: 100%;
 }
 .column .builder-banner-slide > a:focus {
@@ -3139,7 +3140,7 @@ span.callout.top:after {
   color: #000;
 }
 .interactively-flipped-panels .container .panel-wrapper .panel.yellow div.rear {
-  background-color: #77580c;
+  background-color: #715409;
   color: #fff;
 }
 .interactively-flipped-panels .container .panel-wrapper .panel.yellow div.front {
@@ -3718,6 +3719,8 @@ a.vpue-tooltip span b {
   border-bottom-color: #981e32;
   border-bottom-left-radius: 0.15em;
   border-bottom-right-radius: 0.15em;
+  border-left: 0;
+  border-right: 0;
   box-shadow: inset 0 -1px 0 rgba(152, 30, 50, 0.25);
   text-decoration: none;
   transition: all .25s ease;
@@ -6636,4 +6639,15 @@ body {
   color: black;
   margin-right: 0;
   padding: 9px 20px 1px 150px;
+}
+.sab-profile {
+  min-height: 261px;
+}
+.sab-profile .sab-profile__photo {
+  display: block;
+  float: right;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
