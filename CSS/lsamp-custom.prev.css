@@ -1968,6 +1968,7 @@ ol {
 
 .column .builder-banner-slide>a {
 	border: none;
+	box-shadow: none;
 	height: 100%;
 }
 
@@ -2333,7 +2334,7 @@ div.callout.top:after,span.callout.top:after {
 }
 
 .interactively-flipped-panels .container .panel-wrapper .panel.yellow div.rear {
-	background-color: #77580c;
+	background-color: #715409;
 	color: #fff;
 }
 
@@ -2914,6 +2915,8 @@ a.vpue-tooltip span b {
 	border-bottom-color: #981e32;
 	border-bottom-left-radius: .15em;
 	border-bottom-right-radius: .15em;
+	border-left: 0;
+	border-right: 0;
 	box-shadow: inset 0 -1px 0 rgba(152,30,50,.25);
 	text-decoration: none;
 	transition: all .25s ease;
