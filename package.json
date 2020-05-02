@@ -22,15 +22,14 @@
   },
   "homepage": "https://github.com/invokeImmediately/lsamp.wsu.edu#readme",
   "devDependencies": {
-    "gulp": "^4.0.1",
-    "gulp-clean-css": "^4.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-extname": "^0.2.2",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-insert": "^0.5.0",
     "gulp-insert-lines": "github:invokeimmediately/gulp-insert-lines",
     "gulp-less": "^4.0.1",
-    "gulp-regex-replace": "^0.2.3",
     "gulp-replace": "^1.0.0",
     "gulp-uglify": "^3.0.2",
     "pump": "^3.0.0"
