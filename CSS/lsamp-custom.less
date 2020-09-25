@@ -35,9 +35,9 @@
 ***  §3: Site specific styling variables.......................................................89
 ***  §4: Styling based on inclusional mixins...................................................95
 ***  §5: LSAMP specific branding..............................................................103
-***  §6: LSAMP events calendar................................................................144
-***  §7: Styling by page......................................................................164
-***    >>> §7.1: LSAMP STEM Ambassadors (SABs)................................................168
+***  §6: LSAMP events calendar................................................................149
+***  §7: Styling by page......................................................................169
+***    >>> §7.1: LSAMP STEM Ambassadors (SABs)................................................173
 ***  ───────────────────────────────────────────────────────────────────────────────────────────────
 **/
 
@@ -89,7 +89,7 @@
 *** §3: Site specific styling variables
 **/
 
-@site__bg-color: #15574e;
+@site__bg-color: #165f5a;
 
 /** ================================================================================================
 *** §4: Styling based on inclusional mixins
@@ -105,6 +105,11 @@
 
 body {
 	background-color: @site__bg-color;
+}
+
+#jacket {
+	background: url(https://s3.wp.wsu.edu/uploads/sites/2366/2020/09/bg-jacket-4_lsamp.jpg) no-repeat right top, url(https://s3.wp.wsu.edu/uploads/sites/2366/2020/09/bg-spine_lsamp.png) no-repeat left bottom;
+	background-attachment: fixed;
 }
 
 #wsuwp-main {
