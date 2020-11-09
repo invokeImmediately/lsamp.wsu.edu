@@ -6522,7 +6522,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		font-size: 1.3416em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.2em;
 	}
 	
@@ -6542,7 +6542,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		font-size: 1.118em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: 1em;
 	}
 	
@@ -6906,7 +6906,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		font-size: 1.0584em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.0584em;
 	}
 	
@@ -6939,7 +6939,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		font-size: .882em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: .882em;
 	}
 	
@@ -7003,7 +7003,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		font-size: 1.2em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.1292em;
 	}
 	
@@ -7023,7 +7023,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		font-size: 1em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: .941em;
 	}
 	
@@ -7053,7 +7053,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		font-size: 1.3416em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.1292em;
 	}
 	
@@ -7073,7 +7073,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		font-size: 1.118em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: .941em;
 	}
 	
@@ -7103,7 +7103,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		font-size: 1.2em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.2em;
 	}
 	
@@ -7123,7 +7123,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		font-size: 1em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: 1em;
 	}
 	
@@ -7153,7 +7153,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		font-size: 1.1292em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.1292em;
 	}
 	
@@ -7186,7 +7186,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		font-size: .941em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: .941em;
 	}
 	
@@ -7360,7 +7360,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		line-height: 1.5em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		line-height: 1.5em;
 	}
 	
@@ -7380,7 +7380,7 @@ body.tribe-theme-spine:not(.tribe_venue-template-default) .main-header .header-g
 		line-height: 1.5em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		line-height: 1.5em;
 	}
 	
