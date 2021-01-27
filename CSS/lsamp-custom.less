@@ -1,43 +1,20 @@
-/** ───────────────────────────────────────────────────────────────────────────────────────────────
-*** CUSTOM STYLE SHEET for the Louis Stokes Alliance for Minority Participation (LSAMP) Program at
-***   Washington State University
-*** ───────────────────────────────────────────────────────────────────────────────────────────────
-*** SUMMARY: CSS compiled from Less language extension of CSS and designed to be applied to the
-***   LSAMP program website via the CSS Stylesheet Editor in WSUWP.
+/** ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+***   █    ▄▀▀▀ ▄▀▀▄ ▐▀▄▀▌█▀▀▄    ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌   █    █▀▀▀ ▄▀▀▀ ▄▀▀▀
+***   █  ▄ ▀▀▀█ █▄▄█ █ ▀ ▌█▄▄▀ ▀▀ █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌   █  ▄ █▀▀  ▀▀▀█ ▀▀▀█
+***   ▀▀▀  ▀▀▀  █  ▀ █   ▀█        ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀ ▀ ▀▀▀  ▀▀▀▀ ▀▀▀  ▀▀▀ 
 ***
-*** DESCRIPTION: This CSS build entry point is used to produce the custom stylesheet in use on the
-***   by combining legacy code written by staff members in the Voiland College of Engineering and
-***   Architecture, code from the DAESA-wide CSS development project, and code specific to the
-***   LSAMP website and written by Daniel Rieck.
-***
-***   This file and is developed and maintained on the following GitHub project:
-***   https://github.com/invokeImmediately/lsamp.wsu.edu/
-***
-*** AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
-***
-*** LICENSE: ISC - Copyright (c) 2020 Daniel C. Rieck.
-***
-***   Permission to use, copy, modify, and/or distribute this software for any purpose with or
-***   without fee is hereby granted, provided that the above copyright notice and this permission
-***   notice appear in all copies.
-***
-***   THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL C. RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO
-***   THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT
-***   SHALL DANIEL C. RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR
-***   ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
-***   CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-***   PERFORMANCE OF THIS SOFTWARE.
-***  ───────────────────────────────────────────────────────────────────────────────────────────────
+***   See persistent section header comment below (§2) for additional information and license.
+*** └──────────────────────────────────────────────────────────────────────────────────────────────┘
 ***  TABLE OF CONTENTS:
 ***  ────────────────────────────────────────────────────────────────────────────────────────────
-***  §1: Build entry point from DAESA's CSS development project................................48
-***  §2: Persistent comment for documenting stylesheet's unit specific styling section.........56
-***  §3: Site specific styling variables.......................................................89
-***  §4: Styling based on inclusional mixins...................................................95
-***  §5: LSAMP specific branding..............................................................103
-***  §6: LSAMP events calendar................................................................149
-***  §7: Styling by page......................................................................169
-***    >>> §7.1: LSAMP STEM Ambassadors (SABs)................................................173
+***  §1: Build entry point from DAESA's CSS development project................................25
+***  §2: Persistent comment for documenting stylesheet's unit specific styling section.........33
+***  §3: Site specific styling variables.......................................................68
+***  §4: Styling based on inclusional mixins...................................................74
+***  §5: LSAMP specific branding...............................................................82
+***  §6: LSAMP events calendar................................................................128
+***  §7: Styling by page......................................................................148
+***    >>> §7.1: LSAMP STEM Ambassadors (SABs)................................................152
 ***  ───────────────────────────────────────────────────────────────────────────────────────────────
 **/
 
@@ -49,39 +26,41 @@
 **/
 
 @import "lsamp--legacy.less";
-@import "..\WSU-UE---CSS\variables.less";
-@import "..\WSU-UE---CSS\css-build-entry-point.less";
+@import "..\WSU-DAESA-CSS\build-settings.less";
+@import "..\WSU-DAESA-CSS\build-entry-point.less";
 
 /** ================================================================================================
 *** §2: Persistent comment for documenting the unit specific styling section
 **/
 
 /*! ================================================================================================
-*** Custom Styling Specific to the LSAMP Program Website
+*** █    ▄▀▀▀ ▄▀▀▄ ▐▀▄▀▌█▀▀▄   ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌   ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀
+*** █  ▄ ▀▀▀█ █▄▄█ █ ▀ ▌█▄▄▀   █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌   ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄
+*** ▀▀▀  ▀▀▀  █  ▀ █   ▀█       ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀   ▀▀▀   █  ▄▄▄▀ ▀▀▀  ▀▀▀ ▀  ▐ ▀▀▀▀
 *** ================================================================================================
-***   SUMMARY: CSS compiled from Less language extension of CSS and written especially for use on
-***     the website of the WSU LSAMP program.
+*** CSS compiled from Less language extension of CSS and written especially for use on the website
+***   of the WSU LSAMP program.
 ***
-*** DESCRIPTION: The following section is designed to be applied to the LSAMP website via the Custom
-***   Stylesheet editor of WSUWP. Fully documented, precompiled source code from which the code in
-***   this section of the stylesheet was built is developed and maintained on the following GitHub
-***   project:
-***   https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu/
+*** The following section is designed to be applied to the LSAMP website via the Custom Stylesheet
+***   editor of WSUWP. Fully documented, precompiled source code from which the code in this
+***   section of the stylesheet was built is developed and maintained on the linked GitHub project.
 ***
-*** AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
-***
-*** LICENSE: ISC - Copyright (c) 2020 Daniel C. Rieck.
-***
-***   Permission to use, copy, modify, and/or distribute this software for any purpose with or
-***   without fee is hereby granted, provided that the above copyright notice and this permission
-***   notice appear in all copies.
-***
-***   THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS
-***   SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL
-***   DANIEL RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY
-***   DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
-***   CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-***   PERFORMANCE OF THIS SOFTWARE.
+*** @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+*** @link https://github.com/invokeImmediately/lsamp.wsu.edu/blob/master/CSS/lsamp-custom.less
+*** @license MIT — Copyright (c) 2021 Washington State University.
+***   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+***     and associated documentation files (the “Software”), to deal in the Software without
+***     restriction, including without limitation the rights to use, copy, modify, merge, publish,
+***     distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+***     the Software is furnished to do so, subject to the following conditions:
+***   The above copyright notice and this permission notice shall be included in all copies or
+***     substantial portions of the Software.
+***   THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+***     BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+***     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+***     DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+***     FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+***     SOFTWARE.
 *** ================================================================================================
 **/
 
