@@ -30,8 +30,8 @@
 // §1: Gulp task dependencies..................................................................42
 // §2: Specificiation of build settings .......................................................47
 //   §2.1: getCssBuildSettings()...............................................................50
-//   §2.2: getJsBuildSettings()...............................................................100
-// §3: Entry point: Set up of build taks......................................................130
+//   §2.2: getJsBuildSettings()...............................................................125
+// §3: Entry point: Set up of build taks......................................................155
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ( function() {
@@ -59,10 +59,7 @@ function getCssBuildSettings() {
 		commentRemovalNeedle: /^(?:[ \t]*)?\/\*[^!].*$\n(?:^\*\*?[^/].*$\n)*\*\*?\/\n\n?/gm,
 		dependenciesPath: './WSU-DAESA-CSS/',
 		destFolder: './CSS/',
-		fontImportStr: '@import url(\'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,' +
-			'300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;' +
-			'1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wg' +
-			'ht@0,400;0,700;1,400;1,700&display=swap\');\r\n',
+		fontImportStr: gulpBuilder.getDaesaFontImportStr(),
 		insertingMediaQuerySectionHeader: {
 			before: /^@media/,
 				lineBefore: '/*! ========================================================================' +
@@ -135,7 +132,7 @@ function getCssBuildSettings() {
 function getJsBuildSettings() {
 	return {
 		buildDependenciesList: [
-			'./WSU-DAESA-JS/jQuery.oue-custom.js',
+			'./WSU-DAESA-JS/jQuery.daesa-custom.js',
 			'./WSU-DAESA-JS/jQuery.cookieObjs.js',
 			'./WSU-DAESA-JS/jQuery.forms.js',
 			'../jQuery.AreYouSure/jquery.are-you-sure.js',
