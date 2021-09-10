@@ -1,37 +1,38 @@
 /*!*************************************************************************************************
- * gulpfile.js
- * -------------------------------------------------------------------------------------------------
- * SUMMARY: Gulp automation task definition file for setting up tasks that build CSS and JS files
+ * █▀▀▀ █  █ █    █▀▀▄ █▀▀▀ ▀█▀ █    █▀▀▀      █ ▄▀▀▀
+ * █ ▀▄ █  █ █  ▄ █▄▄▀ █▀▀▀  █  █  ▄ █▀▀    ▄  █ ▀▀▀█
+ * ▀▀▀▀  ▀▀  ▀▀▀  █    ▀    ▀▀▀ ▀▀▀  ▀▀▀▀ ▀ ▀▄▄█ ▀▀▀
+ *
+ * Gulp automation task definition file for setting up tasks that build CSS and JS files
  *   for use on the WSUWP website of the WSU LSAMP program.
  *
- * DESCRIPTION: This gulp automation task definition file is designed for use on the following
- *   project that is maintained on GitHub:
- *   https://github.com/invokeImmediately/lsamp.wsu.edu
+ * @version 1.0.0
  *
- * AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
- *
- * LICENSE: ISC - Copyright (c) 2020 Daniel C. Rieck.
- *
- *   Permission to use, copy, modify, and/or distribute this software for any purpose with or
- *   without fee is hereby granted, provided that the above copyright notice and this permission
- *   notice appear in all copies.
- *
- *   THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL C. RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO
- *   THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT
- *   SHALL DANIEL C. RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR
- *   ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
- *   CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
- *   PERFORMANCE OF THIS SOFTWARE.
+ * @link https://github.com/invokeImmediately/lsamp.wsu.edu/blob/master/gulpfile.js
+ * @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ * @license MIT - Copyright (c) 2021 Washington State University
+ *   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *     and associated documentation files (the “Software”), to deal in the Software without
+ *     restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *     distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+ *     the Software is furnished to do so, subject to the following conditions:
+ *   The above copyright notice and this permission notice shall be included in all copies or
+ *     substantial portions of the Software.
+ *   THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *     BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ *     DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ *     FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  **************************************************************************************************/
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 // -----------------
-// §1: Gulp task dependencies..................................................................42
-// §2: Specificiation of build settings .......................................................47
-//   §2.1: getCssBuildSettings()...............................................................50
-//   §2.2: getJsBuildSettings()...............................................................125
-// §3: Entry point: Set up of build taks......................................................155
+// §1: Gulp task dependencies..................................................................43
+// §2: Specification of build settings ........................................................48
+//   §2.1: getCssBuildSettings()...............................................................51
+//   §2.2: getJsBuildSettings()................................................................76
+// §3: Entry point: Set up of build tasks.....................................................106
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ( function() {
@@ -44,7 +45,7 @@
 var gulpBuilder = require( './WSU-DAESA-JS/gulpCssJsBuilder.js' );
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-// §2: Specificiation of build settings 
+// §2: Specification of build settings 
 
 ////////
 // §2.1: getCssBuildSettings()
@@ -62,57 +63,7 @@ function getCssBuildSettings() {
 		fontImportStr: gulpBuilder.getDaesaFontImportStr(),
 		insertingMediaQuerySectionHeader: {
 			before: /^@media/,
-				lineBefore: '/*! ========================================================================' +
-						'========================\r\n' +
-					'*** ▐▀▄▀▌█▀▀▀ █▀▀▄ ▀█▀ ▄▀▀▄   ▄▀▀▄ █  █ █▀▀▀ █▀▀▄ ▀█▀ █▀▀▀ ▄▀▀▀   ▄▀▀▀ █▀▀▀ ▄▀▀▀▐▀█▀▌' +
-						'▀█▀ ▄▀▀▄ ▐▀▀▄\r\n' +
-					'*** █ ▀ ▌█▀▀  █  █  █  █▄▄█   █  █ █  █ █▀▀  █▄▄▀  █  █▀▀  ▀▀▀█   ▀▀▀█ █▀▀  █     █  ' +
-						' █  █  █ █  ▐\r\n' +
-					'*** █   ▀▀▀▀▀ ▀▀▀  ▀▀▀ █  ▀    ▀█▄  ▀▀  ▀▀▀▀ ▀  ▀▄▀▀▀ ▀▀▀▀ ▀▀▀    ▀▀▀  ▀▀▀▀  ▀▀▀  █  ' +
-						'▀▀▀  ▀▀  ▀  ▐\r\n' +
-					'*** ==================================================================================' +
-						'==============\r\n' +
-					'*** Media queries built from precompiled CSS written in the Less language extension' +
-					  ' of CSS. Queries\r\n' +
-					'***   in this section are a combination of those designed for use on DAESA websites' +
-						' and those\r\n' +
-					'***   intended specifically for use on the LSAMP website.\r\n' +
-					'***\r\n' +
-					'*** Fully documented, precompiled source code from which this section of stylesheet' +
-						' was developed\r\n' +
-					'***   is maintained on the following two GitHub projects:\r\n' +
-					'***   - https://github.com/invokeImmediately/WSU-DAESA-CSS/\r\n' +
-					'***   - https://github.com/invokeImmediately/lsamp.wsu.edu/\r\n' +
-					'***\r\n' +
-					'*** @author Daniel Rieck [daniel.rieck@wsu.edu]' +
-						' (https://github.com/invokeImmediately)\r\n' +
-					'*** @license: MIT - Copyright (c) 2021 Washington State University\r\n' +
-					'***   Permission is hereby granted, free of charge, to any person obtaining a copy of' +
-						' this software\r\n' +
-					'***     and associated documentation files (the "Software"), to deal in the Software' +
-						' without\r\n' +
-					'***     restriction, including without limitation the rights to use, copy, modify,' +
-						' merge, publish,\r\n' +
-					'***     distribute, sublicense, and/or sell copies of the Software, and to permit' +
-						' persons to whom\r\n' +
-					'***     the Software is furnished to do so, subject to the following conditions:\r\n' +
-					'***   The above copyright notice and this permission notice shall be included in all' +
-						' copies or\r\n' +
-					'***     substantial portions of the Software.\r\n' +
-					'***   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR' +
-						' IMPLIED, INCLUDING\r\n' +
-					'***     BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR' +
-						' PURPOSE AND\r\n' +
-					'***     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE' +
-						' FOR ANY\r\n' +
-					'***     CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR' +
-						' OTHERWISE,\r\n' +
-					'***     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER' +
-						' DEALINGS IN THE\r\n' +
-					'***     SOFTWARE.\r\n' +
-					'*** ==================================================================================' +
-						'==============\r\n' +
-					'**/',
+				lineBefore: '/*! ================================================================================================\r\n *  ▐▀▄▀▌█▀▀▀ █▀▀▄ ▀█▀ ▄▀▀▄   ▄▀▀▄ █  █ █▀▀▀ █▀▀▄ ▀█▀ █▀▀▀ ▄▀▀▀   ▄▀▀▀ █▀▀▀ ▄▀▀▀▐▀█▀▌▀█▀ ▄▀▀▄ ▐▀▀▄\r\n *  █ ▀ ▌█▀▀  █  █  █  █▄▄█   █  █ █  █ █▀▀  █▄▄▀  █  █▀▀  ▀▀▀█   ▀▀▀█ █▀▀  █     █   █  █  █ █  ▐\r\n *  █   ▀▀▀▀▀ ▀▀▀  ▀▀▀ █  ▀    ▀█▄  ▀▀  ▀▀▀▀ ▀  ▀▄▀▀▀ ▀▀▀▀ ▀▀▀    ▀▀▀  ▀▀▀▀  ▀▀▀  █  ▀▀▀  ▀▀  ▀  ▐\r\n *  ================================================================================================\r\n *  Media queries built from precompiled CSS written in the Less language extension of CSS. Queries\r\n *    in this section are a combination of those designed for use on DAESA websites and those\r\n *    intended specifically for use on the LSAMP website.\r\n * \r\n *  Fully documented, precompiled source code from which this section of stylesheet was developed\r\n *    is maintained on the following two GitHub projects:\r\n *    - https://github.com/invokeImmediately/WSU-DAESA-CSS/\r\n *    - https://github.com/invokeImmediately/lsamp.wsu.edu/\r\n * \r\n *  @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)\r\n *  @license: MIT - Copyright (c) 2021 Washington State University\r\n *    Permission is hereby granted, free of charge, to any person obtaining a copy of this software\r\n *      and associated documentation files (the "Software"), to deal in the Software without\r\n *      restriction, including without limitation the rights to use, copy, modify, merge, publish,\r\n *      distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom\r\n *      the Software is furnished to do so, subject to the following conditions:\r\n *    The above copyright notice and this permission notice shall be included in all copies or\r\n *      substantial portions of the Software.\r\n *    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING\r\n *      BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\r\n *      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\r\n *      CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\r\n *      ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\n *      SOFTWARE.\r\n *  ================================================================================================\r\n */',
 			stopAfterFirstMatch: true
 		},
 		minCssFileExtension: '.min.css',
@@ -152,7 +103,7 @@ function getJsBuildSettings() {
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-// §3: Entry point: Set up of build taks
+// §3: Entry point: Set up of build tasks
 
 gulpBuilder.setUpCssBuildTask( getCssBuildSettings() );
 gulpBuilder.setUpJsBuildTask( getJsBuildSettings() );
