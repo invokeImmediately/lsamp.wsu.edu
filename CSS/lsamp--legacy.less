@@ -1,61 +1,72 @@
-/** ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-*** │ FILENAME: lsamp--legacy.less                                                                 │
-*** │                                                                                              │
-*** │ SUMMARY: See persistent section header comment below (§1) for additional information and     │
-*** │   license governing use.                                                                     │
-*** └──────────────────────────────────────────────────────────────────────────────────────────────┘
-***  TABLE OF CONTENTS:
-***  ────────────────────────────────────────────────────────────────────────────────────────────
-***  §1: Persistent comment for documenting stylesheet's unit specific styling section.........22
-***  §2: General styling.......................................................................57
-***  §3: Headings.............................................................................124
-***  §4: Links................................................................................151
-***  §5: Ad boxes.............................................................................186
-***  §6: Gravity Forms........................................................................208
-***  §7: Google Calendars.....................................................................227
-***  §8: Points of Pride......................................................................252
-***  §9: Other styling........................................................................288
-***  ───────────────────────────────────────────────────────────────────────────────────────────────
-**/
+/*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+ *    █    ▄▀▀▀ ▄▀▀▄ ▐▀▄▀▌█▀▀▄       █    █▀▀▀ █▀▀▀ ▄▀▀▄ ▄▀▀▀ █  █   █    █▀▀▀ ▄▀▀▀ ▄▀▀▀
+ *    █  ▄ ▀▀▀█ █▄▄█ █ ▀ ▌█▄▄▀ ▀▀ ▀▀ █  ▄ █▀▀  █ ▀▄ █▄▄█ █    ▀▄▄█   █  ▄ █▀▀  ▀▀▀█ ▀▀▀█
+ *    ▀▀▀  ▀▀▀  █  ▀ █   ▀█          ▀▀▀  ▀▀▀▀ ▀▀▀▀ █  ▀  ▀▀▀ ▄▄▄▀ ▀ ▀▀▀  ▀▀▀▀ ▀▀▀  ▀▀▀
+ *
+ *    See persistent section header comment below (§1) for additional information and license
+ *      governing use.
+ *  └──────────────────────────────────────────────────────────────────────────────────────────────┘
+ *   TABLE OF CONTENTS:
+ *   ────────────────────────────────────────────────────────────────────────────────────────────
+ *   §1: Persistent comment for documenting stylesheet's unit specific styling section.........24
+ *   §2: General styling.......................................................................68
+ *   §3: Headings.............................................................................135
+ *   §4: Links................................................................................162
+ *   §5: Ad boxes.............................................................................197
+ *   §6: Gravity Forms........................................................................219
+ *   §7: Google Calendars.....................................................................238
+ *   §8: Points of Pride......................................................................263
+ *   §9: Other styling........................................................................299
+ *   ───────────────────────────────────────────────────────────────────────────────────────────────
+ */
 
-/** ================================================================================================
-*** §1: Persistent comment for documenting stylesheet's unit specific styling section
-**/
+/*  ================================================================================================
+ *  §1: Persistent comment for documenting stylesheet's unit specific styling section
+ */
 
 /*! ================================================================================================
-*** LEGACY STYLE SHEET for the LSAMP Program Website
-*** ================================================================================================
-*** SUMMARY: Legacy CSS still in use based on code written by staff members of the Voiland College
-***   of Engeineering and Architecture (VCEA).
-***
-*** DESCRIPTION: Code in this section was carried over from the old version of the LSAMP website,
-***   which was at https://vcea.wsu.edu/lsamp, before LSAMP was organizationally moved to the
-***   Office of the Provost in academic year 2018-19. This file and is developed and maintained on
-***   the GitHub project at https://github.com/invokeImmediately/lsamp.wsu.edu/.
-***
-*** AUTHORS: Authorship has been inherited by Daniel Rieck [daniel.rieck@wsu.edu]
-***   (https://github.com/invokeImmediately). Original authors are uncertain; Joyce Crosthwaite was
-***   the previous website coordinator responsible for maintaining this code when LSAMP was still
-***   at VCEA.
-***
-*** LICENSE: ISC - Copyright (c) 2020 Daniel C. Rieck.
-***
-***   Permission to use, copy, modify, and/or distribute this software for any purpose with or
-***   without fee is hereby granted, provided that the above copyright notice and this permission
-***   notice appear in all copies.
-***
-***   THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS
-***   SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL
-***   DANIEL RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY
-***   DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
-***   CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-***   PERFORMANCE OF THIS SOFTWARE.
-*** ================================================================================================
-**/
+ *  █    █▀▀▀ █▀▀▀ ▄▀▀▄ ▄▀▀▀ █  █   █    ▄▀▀▀ ▄▀▀▄ ▐▀▄▀▌█▀▀▄   ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌
+ *  █  ▄ █▀▀  █ ▀▄ █▄▄█ █    ▀▄▄█   █  ▄ ▀▀▀█ █▄▄█ █ ▀ ▌█▄▄▀   █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌
+ *  ▀▀▀  ▀▀▀▀ ▀▀▀▀ █  ▀  ▀▀▀ ▄▄▄▀   ▀▀▀  ▀▀▀  █  ▀ █   ▀█       ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀
+ *
+ *    ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀
+ *    ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄
+ *    ▀▀▀   █  ▄▄▄▀ ▀▀▀  ▀▀▀ ▀  ▐ ▀▀▀▀
+ *  ================================================================================================
+ *  Legacy CSS still in use on the LSAMP website based on code written by staff members of the
+ *    Voiland College of Engineering and Architecture (VCEA).
+ *
+ *  Code in this section was carried over from the old version of the LSAMP website, which was at
+ *    https://vcea.wsu.edu/lsamp, before LSAMP was organizationally moved to the Office of the
+ *    Provost in academic year 2018-19. This file and is developed and maintained on the GitHub
+ *    project at https://github.com/invokeImmediately/lsamp.wsu.edu/.
+ *
+ *  @version 1.0.0
+ *
+ *  @author Authorship has been inherited by Daniel Rieck [daniel.rieck@wsu.edu]
+ *    (https://github.com/invokeImmediately).
+ *  @author Joyce Crosthwaite was the previous website coordinator who maintained this code when
+ *    LSAMP was still at VCEA.
+ *  @license MIT — Copyright (c) 2021 Washington State University.
+ *    Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *      and associated documentation files (the “Software”), to deal in the Software without
+ *      restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *      distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+ *      the Software is furnished to do so, subject to the following conditions:
+ *    The above copyright notice and this permission notice shall be included in all copies or
+ *      substantial portions of the Software.
+ *    THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *      BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ *      DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ *      FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *      SOFTWARE.
+ *  ================================================================================================
+ */
 
-/** ================================================================================================
-*** §2: General styling
-**/
+/*  ================================================================================================
+ *  §2: General styling
+ */
 
 #binder {
 	background-color: #ffffff;
@@ -104,25 +115,25 @@ main {
 	.main-header {
 		text-align: left;
 	}
-	
+
 	.main-header .sup-header {
 		margin-left: 20px;
 		margin-right: 0;
 	}
-	
+
 	.main-header .sup-header span {
 		line-height: 1.5em;
 	}
-	
+
 	.featured-image {
 		height: 200px;
 		margin-top: -1.2em;
 	}
 }
 
-/** ================================================================================================
-*** §3: Headings
-**/
+/*  ================================================================================================
+ *  §3: Headings
+ */
 
 // h1 {
 // 	font-weight: 300;
@@ -147,9 +158,9 @@ main {
 // 	}
 // }
 
-/** ================================================================================================
-*** §4: Links
-**/
+/*  ================================================================================================
+ *  §4: Links
+ */
 
 a.crimson-button, a.crimson-button:visited {
 	display: inline-block;
@@ -182,9 +193,9 @@ a.crimson-button:hover {
 	content: "\21AA";
 }
 
-/** ================================================================================================
-*** §5: Ad boxes
-**/
+/*  ================================================================================================
+ *  §5: Ad boxes
+ */
 
 .ad-box {
 	border: 1px solid #981e32;
@@ -204,9 +215,9 @@ a.crimson-button:hover {
 	}
 }
 
-/** ================================================================================================
-*** §6: Gravity Forms
-**/
+/*  ================================================================================================
+ *  §6: Gravity Forms
+ */
 
 .gform_wrapper div.charleft {
 	color: #981e32;
@@ -223,9 +234,9 @@ a.crimson-button:hover {
 	color: #981e32;
 }
 
-/** ================================================================================================
-*** §7: Google Calendars
-**/
+/*  ================================================================================================
+ *  §7: Google Calendars
+ */
 
 .responsiveCal {
 	position: relative;
@@ -248,9 +259,9 @@ a.crimson-button:hover {
 	}
 }
 
-/** ================================================================================================
-*** §8: Points of Pride
-**/
+/*  ================================================================================================
+ *  §8: Points of Pride
+ */
 
 img.number {
 	margin-top: -2.5em;
@@ -284,9 +295,9 @@ div.circle {
 	margin-top: 2em;
 }
 
-/** ================================================================================================
-*** §9: Other styling
-**/
+/*  ================================================================================================
+ *  §9: Other styling
+ */
 
 .float-right {
 	margin: 0 0 1em 1em;
