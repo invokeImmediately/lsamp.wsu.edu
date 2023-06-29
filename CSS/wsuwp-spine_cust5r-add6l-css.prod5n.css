@@ -1,0 +1,296 @@
+/*!*************************************
+█▀▀▀▐▄ ▄▌▐▀█▀▌█▀▀▄ ▄▀▀▄   ▄▀▀▀ ▄▀▀▀ ▄▀▀▀
+█▀▀   █    █  █▄▄▀ █▄▄█   █    ▀▀▀█ ▀▀▀█
+▀▀▀▀▐▀ ▀▌  █  ▀  ▀▄█  ▀    ▀▀▀ ▀▀▀  ▀▀▀ 
+FOR THE LSAMP WEBSITE
+---------------------
+@version 1.0.0-rc1
+@author Daniel Rieck
+  [daniel.rieck@wsu.edu]
+  (https://github.com/invokeImmediately)
+@license MIT - Copyright © 2021
+  Washington State University
+  https://mit-license.org/
+***************************************/
+
+/*!*************************************
+ * IMAGE RENDERING FIX FOR CHROME.
+ * @author Daniel Rieck
+ **************************************/
+
+img {
+  image-rendering: -webkit-optimize-contrast; 
+}
+
+/*!***
+ * SPINE THEME COLOR OVERRIDES.
+ * Written by Daniel Rieck, added 2020-11-06.
+ */
+
+.green-lightest-back {
+  background-color: #ecf4ee;
+}
+
+.home-focus-feature {
+  background-color: #d0dfe1;
+}
+
+.daesa-orange-text {
+  color: #a63d0f;
+}
+
+/*!***
+ * EVENTS CALENDAR OVERRIDES.
+ * @author Daniel Rieck
+ * @since 1.0.0
+ */
+
+#tribe-events-pg-template .tribe-events-content ul li {
+  line-height: 1.5em;
+  margin-bottom: 0px;
+}
+
+/*!***
+ * SPINE MENU MODIFICATION.
+ * Written by Daniel Rieck, added 2021-04-21.
+ */
+
+#spine-offsitenav #menu-item-1123 {
+  margin-bottom: 1rem;
+}
+
+#spine-offsitenav #menu-item-1123 a {
+  font-weight: 600;
+}
+
+#spine-offsitenav #menu-item-1123 a:after {
+  content: "";
+}
+
+/*!***
+ * SOLID HEADING HOTFIX
+ * Written by Daniel Rieck, added 2021-06-13.
+ */
+h2.solid.brown-text,
+h3.solid.brown-text,
+h4.solid.brown-text {
+    background: linear-gradient(to right,transparent,rgba(152, 71, 30,.075) 5%,rgba(152, 71, 30,.075) 50%,rgba(152, 71, 30,.225));
+    color: #6d3315;
+}
+
+h2.crimson-text.solid::before, h3.crimson-text.solid::before, h4.crimson-text.solid::before {
+    border-top: 2px solid rgba(152, 71, 30,.6667);
+    border-bottom: 1px solid rgba(152, 71, 30,.3333);
+}
+
+/*!***
+   * SPINE TYPOGRAPHY HOTFIX
+ * Written by Daniel Rieck, added 2021-07-02.
+ */
+#spine-sitenav,
+#spine-offsitenav {
+  font-family: 'Open Sans';
+}
+
+/*!***
+   * HEADING TYPOGRAPHY HOTFIXES.
+ * Written by Daniel Rieck, added 2021-07-02.
+ */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25em;
+}
+
+h1 {
+  color: #a60f2d;
+}
+
+/*!*************************************
+ * PADDING FIX FOR EVENTS CALENDAR
+ * @author Daniel Rieck
+ **************************************/
+
+#tribe-events-bar {
+  margin-top: 0;
+}
+
+@media all and (min-width: 481px) {
+.single.gutter #tribe-events-pg-template.column:not(.gutterless) {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+}
+
+@media all and (max-width: 480px) and (min-width: 361px) {
+.single.gutter #tribe-events-pg-template.column:not(.gutterless) {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+}
+
+
+@media all and (max-width: 360px) {
+.single.gutter #tribe-events-pg-template.column:not(.gutterless) {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+}
+
+/*!**********************************
+ * PAGE HEADER TWEAKS
+ * Added by daniel.rieck@wsu.edu.
+ ***********************************/
+.breadcrumb-list__breadcrumb:first-child .breadcrumb-list__link {
+padding-left: 1em;
+    background-image: url(https://repo.wsu.edu/spine/2.0.2/icons/home-gray.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: left 75%;
+    background-size: .8em auto;
+}
+
+.breadcrumb-list__breadcrumb:first-child .breadcrumb-list__link:hover,
+.breadcrumb-list__breadcrumb:first-child .breadcrumb-list__link:focus {
+  background-image: url(https://repo.wsu.edu/spine/2.0.2/icons/home-crimson.svg);
+}
+
+.article-header h1 {
+  text-transform: uppercase;
+}
+
+/*!***
+ * PNW LSAMP CONFERENCE 2022
+ * @author Daniel Rieck
+ */
+
+.pnwconf22-agenda thead th {
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+.pnwconf22-agenda .column-1:not(th) {
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 694px) {
+.pnwconf22-agenda .column-1 {
+  min-width: 11rem;
+}
+}
+
+.pnwconf22-agenda td[colspan] {
+  background-color: #f3f3f3;
+  font-weight: 700;
+  padding-top: 2rem;
+}
+
+.content-intro {
+    font-size: 1.4rem;
+    max-width: 65ch;
+}
+
+.content-intro--with-bar {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.content-intro--with-bar:after {
+  background-color: #efefef;
+  content:"";
+  bottom: -1rem;
+  height: .2rem;
+  left: 2rem;
+  position: absolute;
+  width: 6rem;
+}
+
+/*! Logo frame custom component. */
+
+.logo-frame {
+  margin-top: 2rem;
+}
+
+.logo-frame__graphic {
+  background: #fff;
+  border-radius: .3rem;
+  box-sizing:border-box;
+  display: block;
+  line-height: 0;
+  padding: 1rem;
+}
+
+.logo-frame__messaging {
+  display: block;
+  margin-top: 1rem;
+}
+
+.logo-frame--zymeworks .logo-frame__graphic {
+  border: 2px solid #1768af;
+}
+
+/*!***
+ * BRIDGE CONFERENCE 2022
+ * @author Daniel Rieck
+ */
+
+.bridge-ws-svthdt {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  min-height: 600px;
+}
+
+.bridge-ws-svthdt.row:not(.clear-none):after,
+.bridge-ws-svthdt.row:not(.clear-none):before {
+    display: none;
+}
+
+.fluid .row.bridge-ws-svthdt .bridge-ws-svthdt__art {
+  background: url(https://s3.wp.wsu.edu/uploads/sites/2366/2022/08/Lilacs-and-Bryan-Hall-Tower_051001743_enhanced_1200w1837h.jpg) center/cover;
+  grid-column: 1 / 2;
+  width: auto;
+}
+
+.fluid .row.bridge-ws-svthdt .bridge-ws-svthdt__messaging {
+  background-color: #e0e0e0;
+  display: grid;
+  grid-column: 2 / 4;
+  align-items: center;
+  padding: 2rem;
+  width: auto;
+}
+
+.bridge-ws-svthdt__header,
+.bridge-ws-svthdt__location,
+.bridge-ws-svthdt__link {
+  color: #242058;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.bridge-ws-svthdt__location {
+  font-size: 2rem;
+}
+
+.bridge-ws-svthdt__title {
+  color: #455512;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 1rem !important;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 693px) {
+.fluid .row.bridge-ws-svthdt .bridge-ws-svthdt__art,
+  .fluid .row.bridge-ws-svthdt .bridge-ws-svthdt__messaging {
+  grid-column: 1 / 4;
+}
+
+  .fluid .row.bridge-ws-svthdt .bridge-ws-svthdt__art {
+    background-position: center 25%;
+    min-height: 300px;
+  }
+  
+.fluid .row.bridge-ws-svthdt .bridge-ws-svthdt__messaging {
+  margin: 0 !important;
+}
+}
