@@ -2530,7 +2530,7 @@ figure figcaption {
 	margin-top: .5em;
 }
 
-.column .gform_fields>.gfield.gfield_contains_required>.ginput_container_select>.gfield_select:not(.gf-value-entered)+.chosen-container-single:not(.chosen-with-drop)>.chosen-single {
+/*.column .gform_fields>.gfield.gfield_contains_required>.ginput_container_select>.gfield_select:not(.gf-value-entered)+.chosen-container-single:not(.chosen-with-drop)>.chosen-single {
 	background: linear-gradient(to bottom,rgba(255,0,0,.1) 0,rgba(255,0,0,0) .6em);
 }
 
@@ -2568,7 +2568,7 @@ figure figcaption {
 
 .column .gform_fields>.gfield.gfield_contains_required .address_line_2 input:focus,.column .gform_fields>.gfield.gfield_contains_required .name_middle input:focus,.column .gform_fields>.gfield.gfield_contains_required .name_suffix input:focus {
 	background-color: #edf3f4 !important;
-}
+}*/
 
 .post-password-required {
 	padding-left: 2rem;
