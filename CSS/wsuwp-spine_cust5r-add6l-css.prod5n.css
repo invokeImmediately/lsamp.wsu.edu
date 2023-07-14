@@ -250,6 +250,10 @@ padding-left: 1em;
   width: auto;
 }
 
+.fluid .row.bridge-ws-svthdt.bridge-ws-svthdt--2023 .bridge-ws-svthdt__art {
+  background: url(https://s3.wp.wsu.edu/uploads/sites/2366/2023/06/Bridge-Workshop-2022_IMG_0210_ALR-Enh_2560w1920h-792x594.jpg) center/cover;
+}
+
 .fluid .row.bridge-ws-svthdt .bridge-ws-svthdt__messaging {
   background-color: #e0e0e0;
   display: grid;
@@ -293,4 +297,123 @@ padding-left: 1em;
 .fluid .row.bridge-ws-svthdt .bridge-ws-svthdt__messaging {
   margin: 0 !important;
 }
+}
+
+/*!***
+ * Gravity Theme enhancements
+ * @author Daniel Rieck
+ */
+
+.gform_wrapper.gravity-theme .gf_page_steps {
+  background-color: #f7f7f7;
+  margin-bottom: 0;
+  padding: .5rem 1rem .25rem;
+}
+
+.gform_wrapper.gravity-theme .gform_body {
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgb(0 0 0 / 15%) inset, 2px 2px 6px rgb(0 0 0 / 5%) inset, -2px 2px 6px rgb(0 0 0 / 5%) inset;
+  padding: 2rem;
+}
+
+.gform_wrapper.gravity-theme .field_sublabel_above .gfield_description {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.gform_wrapper.gravity-theme .field_sublabel_above .gfield_description+.ginput_container {
+  margin-top: .5rem;
+}
+
+.gform_wrapper.gravity-theme .field_sublabel_above .instruction {
+  margin-top: .25rem;
+  padding: 0;
+}
+
+.gform_wrapper.gravity-theme .gfield {
+  margin-top: 1rem;
+}
+
+.gform_wrapper.gravity-theme .gfield input,.gform_wrapper.gravity-theme .gfield select,.gform_wrapper.gravity-theme .gfield textarea {
+  padding: .5rem;
+}
+
+.gform_wrapper.gravity-theme .gfield .gfield_checkbox,.gform_wrapper.gravity-theme .gfield .gfield_radio,.gform_wrapper.gravity-theme .gfield input,.gform_wrapper.gravity-theme .gfield select,.gform_wrapper.gravity-theme .gfield textarea {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom-color: #000;
+  border-radius: .3125rem;
+}
+
+.gform_wrapper.gravity-theme .gfield_label {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.gform_wrapper.gravity-theme .gfield_label+.ginput_container {
+  margin-top: .5rem;
+}
+
+.gform_wrapper.gravity-theme .gfield_html:not(.gfield_html--for-indicator) {
+  background: #fff;
+  border-radius: .3125rem;
+  padding: 2rem;
+}
+
+.gform_wrapper.gravity-theme .gf_page_steps {
+  background-color: #f7f7f7;
+  margin-bottom: 0;
+  padding: .5rem 1rem .25rem;
+}
+
+.gform_wrapper.gravity-theme .gf_step_completed .gf_step_number:before {
+  box-sizing: border-box;
+}
+
+.gform_wrapper.gravity-theme .ginput_complex label {
+  padding: 0;
+}
+
+.gform_wrapper.gravity-theme label {
+  font-weight: 400;
+}
+
+.gform_wrapper.gravity-theme .gfield_contains_required .gfield_checkbox:not(.gf-value-entered),.gform_wrapper.gravity-theme .gfield_contains_required .gfield_radio:not(.gf-value-entered),.gform_wrapper.gravity-theme .gfield_contains_required input:not(.gf-value-entered),.gform_wrapper.gravity-theme .gfield_contains_required select:not(.gf-value-entered),.gform_wrapper.gravity-theme .gfield_contains_required textarea:not(.gf-value-entered) {
+  border-left: 2px solid #a60f2d;
+}
+
+.gform_wrapper.gravity-theme .gfield_contains_required input.gf-value-entered,.gform_wrapper.gravity-theme .gfield_contains_required select.gf-value-entered,.gform_wrapper.gravity-theme .gfield_contains_required textarea.gf-value-entered {
+  padding-left: calc(.5rem + 1px);
+}
+
+.gform_wrapper.gravity-theme .gfield_contains_required .gfield_checkbox.gf-value-entered,.gform_wrapper.gravity-theme .gfield_contains_required .gfield_radio.gf-value-entered {
+  padding-left: 1px;
+}
+
+/*!***
+ * Bridge 2023 Workrshop form.
+ * @author Daniel Rieck
+ */
+#gform_14 .gfield_checkbox .gchoice,
+#gform_14 .gfield_radio .gchoice {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+#gform_14 .gfield_checkbox .gchoice > input,
+#gform_14 .gfield_radio .gchoice > input {
+  margin-top: .36em;
+  margin-right: .5em;
+}
+
+#gform_14 .gfield_checkbox .gchoice + .gchoice,
+#gform_14 .gfield_radio .gchoice + .gchoice {
+  margin-top: .25em;
+}
+
+#gform_14 .name_middle > input,
+#gform_14 .ginput_address_line_2 > input {
+  border-left: 1px solid #ccc;
 }
